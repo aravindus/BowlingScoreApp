@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -14,7 +14,6 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:orientation="vertical">
-        
 
         <TextView
             android:id="@+id/tvTitle"
@@ -26,7 +25,7 @@
             android:gravity="center"
             android:text="@string/app_name"
             android:textAllCaps="true"
-            android:textColor="@android:color/holo_purple"
+            android:textColor="@android:color/holo_blue_bright"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -48,17 +47,17 @@
                 android:layout_marginBottom="30dp"
                 android:gravity="center"
                 android:text="@string/enter_hits"
-                android:textColor="@android:color/holo_green_dark"
+                android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/edtScores"
-                android:inputType="text"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="100dp"
                 android:layout_margin="20dp"
-                android:hint="@string/hit_hint" />
+                android:hint="@string/hit_hint"
+                android:inputType="text" />
 
             <Button
                 android:id="@+id/btnScore"
@@ -66,6 +65,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 android:padding="10dp"
+                android:background="@color/btn_back_color"
                 android:text="@string/get_score_btn_text" />
 
             <TextView
@@ -107,4 +107,4 @@
         </LinearLayout>
 
     </LinearLayout>
-</ScrollView>
+</LinearLayout>

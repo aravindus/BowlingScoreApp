@@ -1,7 +1,11 @@
 package com.aravind.bowlingscoreapp.game
 
-class BowlingScoreGame {
+/**
+ *  A class to handle logic for calculating the overall score form the input frames
+ */
+class BowlingGameScore {
 
+    // Variable to store the Game frame array
     private val gameSoreFrames: Array<GameSoreFrame> = arrayOf(
         GameSoreFrame(),
         GameSoreFrame(),
@@ -12,9 +16,13 @@ class BowlingScoreGame {
         GameSoreFrame(),
         GameSoreFrame(),
         GameSoreFrame(),
-        GameSoreFrame(true),
+        GameSoreFrame(true)
     )
+
+    // Variable to store the current frame index
     private var frameIndex = 0
+
+    // Variable to store the calculated score from the frames
     val calculatedScore: Int
         get() {
             var score = 0
@@ -33,10 +41,16 @@ class BowlingScoreGame {
 
         }
 
+    /**
+     * Method to add score when the frame is a Spare
+     */
     private fun addScoreForSpare(currentFrameIndexSpare: Int): Int {
         return gameSoreFrames[currentFrameIndexSpare + 1].getRollHitScore(1)
     }
 
+    /**
+     * Method to add score when the frame is a Strike
+     */
     private fun addScoreForStrike(currentFrameIndexStrike: Int): Int {
         var bonusScore: Int
         val nextGameFrame: GameSoreFrame = gameSoreFrames[currentFrameIndexStrike + 1]
@@ -59,6 +73,10 @@ class BowlingScoreGame {
         return bonusScore
     }
 
+    /**
+     * Method to get rolls in each frame
+     * @param pinsHit : No of pins in each hits
+     */
     fun roll(pinsHit: Int?) {
         if (gameSoreFrames[frameIndex].isDone) {
             frameIndex++

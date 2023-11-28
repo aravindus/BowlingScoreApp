@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">BowlingScoreApp</string>
     <string name="enter_hits">Enter the no of Hits!!!</string>
-    <string name="hit_hint">Enter the values by comma separated eg : 1,2,8,5,..</string>
+    <string name="hit_hint">Enter the values by comma separated \n eg : 1,2,8,5,..</string>
     <string name="get_score_btn_text">Calculte Score</string>
     <string name="in_progress_message">Please wait</string>
     <string name="perfect_game_message">PERFECT GAME!!!!</string>

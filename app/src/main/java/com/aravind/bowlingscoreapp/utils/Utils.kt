@@ -6,8 +6,14 @@ import android.os.Handler
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 
+/**
+ * Common class for accessing the methods through out the application
+ */
 class Utils {
     companion object {
+        /**
+         * Method to hide the keyboard after the button click
+         */
         fun hideSoftKeyboard(context: Context?, view: View?, handler: Handler) {
             if (null != context && null != view) {
                 val imm =
